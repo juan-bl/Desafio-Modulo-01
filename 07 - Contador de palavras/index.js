@@ -7,4 +7,4 @@ const novo = inputTexto.split(' ');
     novo.splice(index, 1)
 }
     
-novo[novo.length -1] === '' ? console.log(novo.length - 1) : console.log(novo.length)
+novo.trim().length === novo.length ? console.log(novo.length) : console.log(novo.length - 1)
