@@ -1,9 +1,8 @@
-const input = "cAPS"
-
-let resposta;
+const input = "cApS"
 
 // 1 forma
 
+let resposta;
 if (input[0] === input[0].toLowerCase() && input.slice(1) === input.slice(1).toUpperCase()) {
     resposta = input.slice(0, 1).toUpperCase() + input.slice(1).toLowerCase()
 }   else if (input === input.toUpperCase()) {
@@ -44,3 +43,18 @@ console.log(resultado.join(''))
 } else {
     console.log(input)
 }
+
+// 3 forma 
+
+let resultado; 
+
+if (input[0] === input[0].toLowerCase() && input.slice(1) === input.slice(1).toUpperCase()) {
+    resultado = input.replace(/([a-z]{1})([A-Z]{1,100000})/, function(regex, argumento1, argumento2) {
+    return argumento1.toUpperCase() + argumento2.toLowerCase()
+}) 
+} else if (input === input.toUpperCase()) {
+    resultado = input.toLowerCase()
+} else {
+    resultado = input
+}
+console.log(resultado)

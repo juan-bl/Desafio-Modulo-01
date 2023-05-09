@@ -1,5 +1,5 @@
-const inputMIN = 25
-const inputKM = 11.5
+const inputMIN = 18
+const inputKM = 7.5
 
 let valor = 0
 
