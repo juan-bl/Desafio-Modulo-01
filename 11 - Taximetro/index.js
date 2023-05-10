@@ -1,16 +1,21 @@
-const inputMIN = 18
-const inputKM = 7.5
+function solucao(min, km) {
+    //seu codigo aqui
+    let contMin = 0, contKm = 0, somaTotal = 0;
 
-let valor = 0
+    if (min <= 20) {
+        somaTotal += min * 50;
+    } else {
+        somaTotal += 20 * 50
+        somaTotal += (min - 20) * 30
+    }
+    if (km <= 10) {
+        somaTotal = somaTotal + (km * 70);
+    } else {
+        somaTotal = somaTotal + (10 * 70);
+        somaTotal = somaTotal + ((km - 10) * 50);
+    }
 
-if (inputKM <= 10) {
-    valor += (inputKM * 70)
-} else {
-    valor += (10 * 70) + ((inputKM - 10) * 50)
+    console.log(somaTotal);
 }
-if (inputMIN <= 20) {
-    valor += (inputMIN * 50)
-} else {
-    valor += (20 * 50) + ((inputMIN - 20) * 30)
-}
-console.log(valor)
+
+solucao(25, 11.5);
