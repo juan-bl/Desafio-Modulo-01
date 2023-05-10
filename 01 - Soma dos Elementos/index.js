@@ -1,7 +1,12 @@
-const input = [1, 543, 567, 7856, 32, 54]
+function solucao(lista) {
+  //seu codigo aqui
+    const resultado = lista.reduce((acumulador, elementoAtual) => {
+        return acumulador + elementoAtual;
+    })
+    
+    console.log(resultado)
+}
 
-const resultado = input.reduce((acc, cur) => { // acc = accumulator && cur = currency
-    return acc + cur
-})
- 
-  console.log(resultado);
+const lista = [1, 2, 3, 4];
+
+solucao(lista);
