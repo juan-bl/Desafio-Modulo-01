@@ -1,10 +1,18 @@
-const inputCarta = 3
+function solucao(carta) {
+    //seu codigo aqui
+    if (carta === 'Q') {
+        console.log('J');
+    } else if (carta === 'J') {
+        console.log('K');
+    } else if (carta === 'K') {
+        console.log('A');
+    } else if (carta === 'A') {
+        console.log('2');
+    } else if (carta == '2') {
+        console.log('3');
+    } else if (carta == '3') {
+        console.log('Q');
+    };
+};
 
-const opcoes = ["Q", "J", "K", "A", "2", "3"]
-
-const resultado = opcoes.indexOf(inputCarta.toString().trim())
-if (resultado !== 5) {
-console.log(opcoes[resultado+1])
-} else {
-    console.log(opcoes[0])
-}
+solucao('Q');
