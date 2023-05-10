@@ -1,15 +1,22 @@
-const inputTexto = "Cuidado, pois        usuarios as vezes       deixam espacos vazios no fim do texto sem querer "
-console.time('TempoLoop')
-const novo = inputTexto.split(' ');
+function solucao(texto) {
+    // Seu codigo aqui
+    let contador = '', contadorDeEspaco = 0;
+    texto = texto.trim();
+    
+    contador = texto.split('');
+    texto = texto.split(' ');
+    
+    for (let palavra of texto) {
+        if (palavra === '') {
+            contadorDeEspaco++;
+        };
+    };
+    
+    if (texto[0] === '') {
+        console.log(0);
+    } else if (contador.length <= 5000) {
+        console.log(texto.length - contadorDeEspaco);
+    };
+};
 
-    while (novo.indexOf('') !== -1) {
-    novo.splice(novo.indexOf(''), 1)
-}
-
-novo[novo.length -1] === '' ? console.log(novo.length - 1) : console.log(novo.length)
-
-// 2 forma
-
-console.log(inputTexto.split(' ').filter(Boolean).length);
-
-console.timeEnd('TempoLoop')
+solucao('    Um texto qualquer ')
